@@ -1,7 +1,11 @@
 (ns queuebec.core
+  (:require
+    [queuebec.jobs :as jobs]
+    [queuebec.web :as web])
   (:gen-class))
 
 (defn -main
-  "I don't do a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (println ";; starting on 3001")
+  (jobs/start)
+  (web/start))

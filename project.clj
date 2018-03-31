@@ -6,6 +6,7 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [bidi "2.1.3"]
                  [ring/ring-core "1.6.3"]
+                 [ring/ring-defaults "0.3.1"]
                  [ring/ring-jetty-adapter "1.6.3"]
                  [org.clojure/core.async "0.4.474"]]
   :main ^:skip-aot queuebec.core
