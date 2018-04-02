@@ -3,11 +3,28 @@
 Ever wanted a job queue that didn't ask you to give up the creature comforts
 of your web stack? Probably not, but here one is anyway.
 
-## Usage
+## Getting started
 
-Make any HTTP request to the web server that is started on port 3001. That
-request will be submitted to the job runner and, if it matches a registered
-job, will execute.
+First, you'll need [Leiningen](https://leiningen.org) installed (instructions
+on the Leiningen site).
+
+Next, execute `lein run`.
+
+Last, make an HTTP call to the service:
+
+`curl http://localhost:3001/sum -d'x=27&y=15'`
+
+You'll see the web server log `42` as the job executes.
+
+## TODO
+
+A whole lot.
+
+* Failure handling
+* Retries
+* Priority
+* Job middleware
+* Distributed job storage
 
 ## License
 
